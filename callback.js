@@ -1,14 +1,23 @@
-// const callMe = () => {
-//   console.log("hell from callback function");
-// };
+const callMe = () => {
+  console.log("hello from callback function");
+};
 
-// const greeting = (callback) => {
-//   console.log("hello world");
-//   callback();
-// };
+const greeting = (callback) => {
+  console.log("hello world");
+  callback();
+};
 
 // * Call a greeting function with passing in reference of 'callMe' function
 // greeting(callMe);
+
+// * Anonymous Function: Can only run as a callback function
+// function() {
+//   console.log('Tawan')
+// }
+
+// () => {
+//   console.log('Tawan')
+// }
 
 // * Call a greeting function with passing in an anonymous function
 // greeting(function () {
@@ -20,20 +29,11 @@
 //   console.log("Tawan from anonymous arrow function");
 // });
 
-// * Anonymous Function: Can only run as a callback function
-// function() {
-//   console.log('Tawan')
-// }
-
-// () => {
-//   console.log('Tawan')
-// }
-
 // * Callback function with parameter
-// const greeting2 = (callback) => {
-//   console.log("hello world");
-//   callback("Anna", 18);
-// };
+const greeting2 = (callback) => {
+  console.log("hello world");
+  callback("Anna", 18);
+};
 
 // greeting2((name) => {
 //   console.log(`hello from ${name}`);
@@ -53,30 +53,30 @@ const originalArr = [1, 2, 3, 4];
 
 // loopThroughArrayV2(originalArr);
 
-// const loopThroughArrayV2 = (arr, cb) => {
-//   for (let i = 0; i < arr.length; i++) {
-//     cb(arr[i]);
-//   }
-// };
+const loopThroughArrayV2 = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    cb(arr[i]);
+  }
+};
 
 // loopThroughArrayV2(originalArr, (item) => {
 //   console.log(item);
 // });
 
-// const mapArray = (arr, cb) => {
-//   const result = [];
+const mapArray = (arr, cb) => {
+  const result = [];
 
-//   for (let i = 0; i < arr.length; i++) {
-//     const newItem = cb(arr[i]);
-//     result.push(newItem);
-//   }
+  for (let i = 0; i < arr.length; i++) {
+    const newItem = cb(arr[i]);
+    result.push(newItem);
+  }
 
-//   return result;
-// };
+  return result;
+};
 
-// const newArr = mapArray(originalArr, (item) => {
-//   return item * 2;
-// });
+const newArr = mapArray(originalArr, (item) => {
+  return item * 2;
+});
 
 // console.log(newArr);
 // // * [2, 4, 6, 8]
