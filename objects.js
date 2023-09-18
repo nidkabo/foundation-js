@@ -13,7 +13,7 @@ console.log("Name:", person.name); // * Access using dot notation
 console.log("Name:", person[keyName]); // * Access using bracket notation ,person['name']
 // dot notation refer to key property directly, using .keyName will give undefined
 
-// * Review Reference Type
+// * Review Reference Type => can change/mutate in Heap
 // const person2 = person
 // person2.name = 'Men'
 
