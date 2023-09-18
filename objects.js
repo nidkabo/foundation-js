@@ -10,7 +10,8 @@ const person = {
 const keyName = "name";
 
 console.log("Name:", person.name); // * Access using dot notation
-console.log("Name:", person[keyName]); // * Access using bracket notation
+console.log("Name:", person[keyName]); // * Access using bracket notation ,person['name']
+// dot notation refer to key property directly, using .keyName will give undefined
 
 // * Review Reference Type
 // const person2 = person

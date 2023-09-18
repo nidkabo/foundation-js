@@ -64,3 +64,85 @@ const unique = (arr) => {
 };
 
 console.log(unique([10, 20, 10, 20, 30, 50, 60, 100]));
+
+// * 5.Write a function draw(n)
+const draw = (n) => {
+  a = "";
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      a += "*";
+    }
+    a += "\n";
+  }
+  return a.trim();
+};
+
+console.log(draw(5));
+
+// * 6.Write a function drawNg(n)
+const drawNg = (n) => {
+  a = "";
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < i + 1; j++) {
+      a += "*";
+    }
+    a += "\n";
+  }
+  return a.trim();
+};
+
+console.log(drawNg(5));
+
+// * 7.Write a function mutual(arr1, arr2)
+const mutual = (arr1, arr2) => {
+  a = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        a.push(arr2[j]);
+      }
+    }
+  }
+  return a;
+};
+
+const class1 = ["Alice", "Bob", "John", "Jane"];
+const class2 = ["John", "Foobar", "Barbaz", "Foobaz", "Bob"];
+
+console.log(mutual(class1, class2));
+
+// * 8.Write a fizzBuzz(n) function
+const fizzBuzz = (n) => {
+  const a = [];
+
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      a.push("FizzBuzz");
+    } else if (i % 3 === 0) {
+      a.push("Fizz");
+    } else if (i % 5 === 0) {
+      a.push("Buzz");
+    } else {
+      a.push(i.toString());
+    }
+  }
+  return a.join("\n");
+};
+
+console.log(fizzBuzz(20));
+
+// * 9.Write a GCD function gcd(a, b)
+const gcd = (a, b) => {
+  if (b === 0) {
+    return a;
+  } else {
+    return gcd(b, a % b);
+  }
+};
+
+console.log(gcd(10, 15));
+
+// * 10.Write a function filterLt(n, arr)
